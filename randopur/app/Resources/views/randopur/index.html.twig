@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Randopurs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Codeinsee</th>
+                <th>Nomcommune</th>
+                <th>Centroidxetrs3035</th>
+                <th>Centroidyetrs3035</th>
+                <th>Dateindicesupervise</th>
+                <th>Echeance</th>
+                <th>Dateecheance</th>
+                <th>Valeurssindiceno2</th>
+                <th>Valeurssindiceo3</th>
+                <th>Valeurssindicepm10</th>
+                <th>Valeurssindiceso2</th>
+                <th>Libelleindice</th>
+                <th>Libellefamilleindice</th>
+                <th>Libellequaliteair</th>
+                <th>Couleurcartege</th>
+                <th>Libellepolluantresponsable</th>
+                <th>Notationpolluantresponsable</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for randopur in randopurs %}
+            <tr>
+                <td><a href="{{ path('randopur_show', { 'id': randopur.id }) }}">{{ randopur.codeInsee }}</a></td>
+                <td>{{ randopur.nomCommune }}</td>
+                <td>{{ randopur.centroidXEtrs3035 }}</td>
+                <td>{{ randopur.centroidYEtrs3035 }}</td>
+                <td>{{ randopur.dateIndiceSupervise }}</td>
+                <td>{{ randopur.echeance }}</td>
+                <td>{{ randopur.dateEcheance }}</td>
+                <td>{{ randopur.valeurSsindiceNo2 }}</td>
+                <td>{{ randopur.valeurSsindiceO3 }}</td>
+                <td>{{ randopur.valeurSsindicePm10 }}</td>
+                <td>{{ randopur.valeurSsindiceSo2 }}</td>
+                <td>{{ randopur.libelleIndice }}</td>
+                <td>{{ randopur.libelleFamilleIndice }}</td>
+                <td>{{ randopur.libelleQualiteAir }}</td>
+                <td>{{ randopur.couleurCarteGe }}</td>
+                <td>{{ randopur.libellePolluantResponsable }}</td>
+                <td>{{ randopur.notationPolluantResponsable }}</td>
+                <td>{{ randopur.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('randopur_show', { 'id': randopur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('randopur_edit', { 'id': randopur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('randopur_new') }}">Create a new randopur</a>
+        </li>
+    </ul>
+{% endblock %}

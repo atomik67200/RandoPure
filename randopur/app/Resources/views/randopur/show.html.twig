@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Randopur</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Codeinsee</th>
+                <td>{{ randopur.codeInsee }}</td>
+            </tr>
+            <tr>
+                <th>Nomcommune</th>
+                <td>{{ randopur.nomCommune }}</td>
+            </tr>
+            <tr>
+                <th>Centroidxetrs3035</th>
+                <td>{{ randopur.centroidXEtrs3035 }}</td>
+            </tr>
+            <tr>
+                <th>Centroidyetrs3035</th>
+                <td>{{ randopur.centroidYEtrs3035 }}</td>
+            </tr>
+            <tr>
+                <th>Dateindicesupervise</th>
+                <td>{{ randopur.dateIndiceSupervise }}</td>
+            </tr>
+            <tr>
+                <th>Echeance</th>
+                <td>{{ randopur.echeance }}</td>
+            </tr>
+            <tr>
+                <th>Dateecheance</th>
+                <td>{{ randopur.dateEcheance }}</td>
+            </tr>
+            <tr>
+                <th>Valeurssindiceno2</th>
+                <td>{{ randopur.valeurSsindiceNo2 }}</td>
+            </tr>
+            <tr>
+                <th>Valeurssindiceo3</th>
+                <td>{{ randopur.valeurSsindiceO3 }}</td>
+            </tr>
+            <tr>
+                <th>Valeurssindicepm10</th>
+                <td>{{ randopur.valeurSsindicePm10 }}</td>
+            </tr>
+            <tr>
+                <th>Valeurssindiceso2</th>
+                <td>{{ randopur.valeurSsindiceSo2 }}</td>
+            </tr>
+            <tr>
+                <th>Libelleindice</th>
+                <td>{{ randopur.libelleIndice }}</td>
+            </tr>
+            <tr>
+                <th>Libellefamilleindice</th>
+                <td>{{ randopur.libelleFamilleIndice }}</td>
+            </tr>
+            <tr>
+                <th>Libellequaliteair</th>
+                <td>{{ randopur.libelleQualiteAir }}</td>
+            </tr>
+            <tr>
+                <th>Couleurcartege</th>
+                <td>{{ randopur.couleurCarteGe }}</td>
+            </tr>
+            <tr>
+                <th>Libellepolluantresponsable</th>
+                <td>{{ randopur.libellePolluantResponsable }}</td>
+            </tr>
+            <tr>
+                <th>Notationpolluantresponsable</th>
+                <td>{{ randopur.notationPolluantResponsable }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ randopur.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('randopur_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('randopur_edit', { 'id': randopur.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

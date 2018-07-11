@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: 3306
+    database_name: randopur
+    database_user: aurelio
+    database_password: 'Be-&76Op$*'
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: cd1e6d42fa286643c4ee5f6aa284d02e5add364b

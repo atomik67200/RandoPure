@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Randopur" table="randopur">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="codeInsee" type="integer" column="code_insee" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="nomCommune" type="text" column="NOM_COMMUNE" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="centroidXEtrs3035" type="integer" column="centroid_x_etrs3035" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="centroidYEtrs3035" type="integer" column="centroid_y_etrs3035" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="dateIndiceSupervise" type="text" column="DATE_INDICE_SUPERVISE" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="echeance" type="integer" column="ECHEANCE" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="dateEcheance" type="text" column="DATE_ECHEANCE" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="valeurSsindiceNo2" type="integer" column="VALEUR_SSINDICE_NO2" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="valeurSsindiceO3" type="integer" column="VALEUR_SSINDICE_O3" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="valeurSsindicePm10" type="integer" column="VALEUR_SSINDICE_PM10" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="valeurSsindiceSo2" type="integer" column="VALEUR_SSINDICE_SO2" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="libelleIndice" type="text" column="LIBELLE_INDICE" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="libelleFamilleIndice" type="text" column="LIBELLE_FAMILLE_INDICE" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="libelleQualiteAir" type="text" column="LIBELLE_QUALITE_AIR" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="couleurCarteGe" type="text" column="COULEUR_CARTE_GE" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="libellePolluantResponsable" type="text" column="LIBELLE_POLLUANT_RESPONSABLE" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="notationPolluantResponsable" type="text" column="NOTATION_POLLUANT_RESPONSABLE" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>
